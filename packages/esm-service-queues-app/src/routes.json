@@ -78,6 +78,11 @@
       "name": "transition-overflow-menu-item",
       "component": "transitionOverflowMenuItem",
       "slot": "transition-overflow-menu-item-slot"
+    },
+    {
+      "name": "clinic-metics-items",
+      "component": "clinicMetrics",
+      "slot": "clinician-metrics-tiles-slot2"
     }
   ],
   "modals": [

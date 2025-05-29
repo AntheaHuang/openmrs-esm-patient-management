@@ -33,6 +33,11 @@ export const queueList = getAsyncLifecycle(
   options,
 );
 
+export const clinicMetrics = getAsyncLifecycle(
+  () => import('./patient-queue-metrics/clinic-metrics.component'),
+  options,
+);
+
 export const outpatientSideNav = getAsyncLifecycle(() => import('./side-menu/side-menu.component'), options);
 
 export const serviceQueuesDashboardLink = getSyncLifecycle(createDashboardLink(dashboardMeta), options);

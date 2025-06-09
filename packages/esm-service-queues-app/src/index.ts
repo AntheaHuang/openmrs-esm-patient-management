@@ -38,6 +38,8 @@ export const clinicMetrics = getAsyncLifecycle(
   options,
 );
 
+export const queueTable = getAsyncLifecycle(() => import('./queue-table/default-queue-table.component'), options);
+
 export const outpatientSideNav = getAsyncLifecycle(() => import('./side-menu/side-menu.component'), options);
 
 export const serviceQueuesDashboardLink = getSyncLifecycle(createDashboardLink(dashboardMeta), options);
@@ -87,6 +89,14 @@ export const transitionQueueEntryModal = getAsyncLifecycle(
   () => import('./queue-table/queue-entry-actions/transition-queue-entry.modal'),
   {
     featureName: 'transfer patient to a different queue',
+    moduleName,
+  },
+);
+
+export const transitionQueueServeModal = getAsyncLifecycle(
+  () => import('./queue-table/queue-entry-actions/transition-queue-serve.modal'),
+  {
+    featureName: 'transfer patient status to in service',
     moduleName,
   },
 );

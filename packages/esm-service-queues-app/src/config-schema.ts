@@ -14,6 +14,7 @@ const columnTypes = [
   'priority',
   'queue-number',
   'queue',
+  'quick-action',
   'status',
   'visit-start-time',
   'wait-time',
@@ -75,7 +76,17 @@ export const defaultColumnConfig: ColumnConfig = {
 };
 
 export const defaultQueueTable: TableDefinitions = {
-  columns: ['patient-name', 'coming-from', 'priority', 'status', 'queue', 'wait-time', 'actions'],
+  columns: [
+    'patient-name',
+    'patient-age',
+    'coming-from',
+    'priority',
+    'status',
+    'queue',
+    'wait-time',
+    'quick-action',
+    'actions',
+  ],
   appliedTo: [{ queue: null, status: null }],
 };
 

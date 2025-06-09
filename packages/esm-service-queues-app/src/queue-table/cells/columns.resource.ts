@@ -21,6 +21,7 @@ import { queueTableVisitAttributeQueueNumberColumn } from './queue-table-visit-a
 import { queueTableVisitStartTimeColumn } from './queue-table-visit-start-time-cell.component';
 import { queueTableWaitTimeColumn } from './queue-table-wait-time-cell.component';
 import { queueTableActionColumn } from './queue-table-action-cell.component';
+import { queueTableQuickActionColumn } from './queue-table-quick-action-cell.component';
 
 // returns the columns to display for a queue table of a particular queue + status.
 // For a table displaying all entries of a particular queue, the status param should be null
@@ -124,6 +125,9 @@ function getColumnFromDefinition(t: TFunction, columnDef: ColumnDefinition): Que
     }
     case 'visit-start-time': {
       return queueTableVisitStartTimeColumn(id, translatedHeader ?? t('visitStartTime', 'Visit start time'));
+    }
+    case 'quick-action': {
+      return queueTableQuickActionColumn(id, translatedHeader ?? t('quickAction', 'Quick action'));
     }
     case 'actions': {
       return queueTableActionColumn(id, translatedHeader ?? t('actions', 'Actions'));

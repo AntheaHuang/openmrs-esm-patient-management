@@ -83,6 +83,11 @@
       "name": "clinic-metics-items",
       "component": "clinicMetrics",
       "slot": "clinician-metrics-tiles-slot2"
+    },
+    {
+      "name": "queue-table",
+      "component": "queueTable",
+      "slot": "clinician-queue-table-slot"
     }
   ],
   "modals": [
@@ -109,6 +114,10 @@
     {
       "name": "transition-queue-entry-modal",
       "component": "transitionQueueEntryModal"
+    },
+    {
+      "name": "transition-queue-serve-modal",
+      "component": "transitionQueueServeModal"
     },
     {
       "name": "transition-queue-entry-status-modal",
